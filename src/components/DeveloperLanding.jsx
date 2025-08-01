@@ -9,11 +9,13 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaLock,
+  FaRocket,
 } from "react-icons/fa";
-import { SiTypescript, SiJavascript, SiVuedotjs, SiMysql } from "react-icons/si"; 
+import { SiTypescript, SiJavascript, SiVuedotjs, SiMysql } from "react-icons/si";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Timeline from "./TimeLine";
+import CurrentProjects from "./currentProjects";
 
 const techSkills = [
   { name: "JavaScript", icon: <SiJavascript />, level: 80 },
@@ -24,7 +26,7 @@ const techSkills = [
   { name: "CSS", icon: <FaCss3Alt />, level: 75 },
   { name: "Node.js", icon: <FaNodeJs />, level: 70 },
   { name: "Python", icon: <FaPython />, level: 85 },
-  { name: "SQL", icon: <SiMysql />, level: 80 }, 
+  { name: "SQL", icon: <SiMysql />, level: 80 },
 ];
 
 export default function DeveloperLanding() {
@@ -52,7 +54,7 @@ export default function DeveloperLanding() {
       {/* Card */}
       <div className="bg-white dark:bg-gray-800 max-w-md w-full rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg p-10 text-center z-10">
         <h1
-          className={`text-4xl mb-2 font-modern font-semibold ${
+          className={`text-4xl mb-2 font-modern ${
             darkMode ? "font-normal" : "font-semibold"
           }`}
           style={{ fontWeight: darkMode ? 400 : 600 }}
@@ -78,6 +80,8 @@ export default function DeveloperLanding() {
             ))}
           </ul>
         </section>
+
+        {/* Timeline */}
         <div className="mt-20 w-full">
           <Timeline />
         </div>
@@ -100,6 +104,23 @@ export default function DeveloperLanding() {
               </div>
             </div>
           ))}
+        </section>
+
+        {/* Laufende Projekte */}
+        <section className="mb-10 text-left">
+          <div className="flex items-center gap-2 mb-4">
+            <motion.div
+              animate={{ rotate: [0, 20, -20, 20, 0] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+              className="text-blue-500 dark:text-blue-300"
+            >
+              <FaRocket size={18} />
+            </motion.div>
+            <h3 className="text-xl font-bold tracking-wide">
+              Laufende Projekte
+            </h3>
+          </div>
+          <CurrentProjects />
         </section>
 
         {/* Socials */}
