@@ -10,6 +10,8 @@ import {
   FaCss3Alt,
   FaLock,
   FaRocket,
+  FaTools,
+  FaClock,
 } from "react-icons/fa";
 import { SiTypescript, SiJavascript, SiVuedotjs, SiMysql } from "react-icons/si";
 import { FiSun, FiMoon } from "react-icons/fi";
@@ -30,7 +32,7 @@ const techSkills = [
 ];
 
 export default function DeveloperLanding() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true); // Dark Mode standardmäßig an
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
@@ -67,7 +69,10 @@ export default function DeveloperLanding() {
 
         {/* Technologien */}
         <section className="mb-8">
-          <h2 className="text-lg font-semibold mb-4">Technologien</h2>
+          <div className="flex items-center gap-2 mb-4 justify-center">
+            <FaTools className="text-xl text-blue-500 dark:text-blue-300" />
+            <h2 className="text-lg font-semibold">Technologien</h2>
+          </div>
           <ul className="flex flex-wrap justify-center gap-3 text-sm font-mono">
             {techSkills.map(({ name, icon }) => (
               <li
@@ -82,12 +87,18 @@ export default function DeveloperLanding() {
         </section>
 
         {/* Timeline */}
-        <div className="mt-20 w-full">
+        <section className="mb-10">
+          <div className="flex items-center gap-2 mb-4 justify-center">
+          </div>
           <Timeline />
-        </div>
+        </section>
 
         {/* Skill Levels mit Animation */}
         <section className="mb-10 text-left">
+          <div className="flex items-center gap-2 mb-4 justify-center">
+            <FaTools className="text-xl text-yellow-500 dark:text-yellow-300" />
+            <h2 className="text-lg font-semibold">Skill Levels</h2>
+          </div>
           {techSkills.map(({ name, level }) => (
             <div key={name} className="mb-3">
               <div className="flex justify-between mb-1 text-xs font-semibold">
@@ -116,9 +127,7 @@ export default function DeveloperLanding() {
             >
               <FaRocket size={18} />
             </motion.div>
-            <h3 className="text-xl font-bold tracking-wide">
-              Laufende Projekte
-            </h3>
+            <h3 className="text-xl font-bold tracking-wide">Laufende Projekte</h3>
           </div>
           <CurrentProjects />
         </section>

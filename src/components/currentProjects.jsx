@@ -3,6 +3,12 @@ import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const currentProjects = [
+    {
+    name: "Eigene Domain und Implementation",
+    description: "Diese Website – als laufendes Fullstack-Projekt in React & Tailwind.",
+    progress: 100,
+    link: "https://justinconrad.dev",
+  },
   {
     name: "Portfolio Website",
     description: "Diese Website – als laufendes Fullstack-Projekt in React & Tailwind.",
@@ -10,9 +16,9 @@ const currentProjects = [
     link: "https://github.com/jstn-crd/jstn-crd-website",
   },
   {
-    name: "Testing neuer Ideen",
+    name: "Brainstorming für Projekte",
     description: "Bald neue Updates.",
-    progress: 10,
+    progress: 40,
     link: "https://github.com/jstn-crd/",
   },
 ];

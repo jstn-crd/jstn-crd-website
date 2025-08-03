@@ -9,28 +9,29 @@ import { SiTypescript, SiJavascript, SiVuedotjs } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const timelineData = [
-  {
-    year: "2020",
-    title: "Start Informatik-Interesse",
-    description: "Erste Erfahrungen mit HTML, CSS und JavaScript gesammelt.",
+    {
+    year: "2025",
+    title: "Fullstack-Entwicklung & Abschluss",
+    description:
+      "Steigende Projekte mit Fokus auf Fullstack-Entwicklung. Abschluss der Ausbildung.",
     technologies: [
+      <SiTypescript key="ts3" />,
+      <FaReact key="react3" />,
+      <FaNodeJs key="nodejs2" />,
+    ],
+  },
+    {
+    year: "2024",
+    title: "Komplexere Frontend-Projekte",
+    description:
+      "Programmierung des IHK_Prüfungsprojekts basierend auf TypeScript und Vue.js",
+    technologies: [
+      <SiTypescript key="ts2" />,
       <SiJavascript key="js" />,
-      <FaHtml5 key="html5" />,
-      <FaCss3Alt key="css3" />,
+      <SiVuedotjs key="vue2" />,
     ],
   },
-  {
-    year: "2021 – 2022",
-    title: "Ausbildungsstart zum Fachinformatiker AE",
-    description: "Kleinere Webseiten & Tools gebaut, Fokus auf Objektorientierte Programmierung.",
-    technologies: [
-      <FaPython key="python" />,
-      <FaHtml5 key="html5b" />,
-      <FaCss3Alt key="css3b" />,
-      <FaReact key="react" />,
-    ],
-  },
-  {
+    {
     year: "2023",
     title: "Interesse für die Web-Entwicklung",
     description:
@@ -42,26 +43,25 @@ const timelineData = [
       <SiTypescript key="ts" />,
     ],
   },
-  {
-    year: "2024",
-    title: "Komplexere Frontend-Projekte",
-    description:
-      "Programmierung des IHK_Prüfungsprojekts basierend auf TypeScript und Vue.js",
+    {
+    year: "2021 – 2022",
+    title: "Ausbildungsstart zum Fachinformatiker AE",
+    description: "Kleinere Webseiten & Tools gebaut, Fokus auf Objektorientierte Programmierung.",
     technologies: [
-      <SiTypescript key="ts2" />,
-      <SiJavascript key="js" />,
-      <SiVuedotjs key="vue2" />,
+      <FaPython key="python" />,
+      <FaHtml5 key="html5b" />,
+      <FaCss3Alt key="css3b" />,
+      <FaReact key="react" />,
     ],
   },
   {
-    year: "2025",
-    title: "Fullstack-Entwicklung & Abschluss",
-    description:
-      "Steigende Projekte mit Fokus auf Fullstack-Entwicklung. Abschluss der Ausbildung.",
+    year: "2020",
+    title: "Start Informatik-Interesse",
+    description: "Erste Erfahrungen mit HTML, CSS und JavaScript gesammelt.",
     technologies: [
-      <SiTypescript key="ts3" />,
-      <FaReact key="react3" />,
-      <FaNodeJs key="nodejs2" />,
+      <SiJavascript key="js" />,
+      <FaHtml5 key="html5" />,
+      <FaCss3Alt key="css3" />,
     ],
   },
 ];
