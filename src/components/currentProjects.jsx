@@ -1,19 +1,21 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaGlobe, FaRocket } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const currentProjects = [
-    {
+  {
     name: "Eigene Domain und Implementation",
     description: "Diese Website – als laufendes Fullstack-Projekt in React & Tailwind.",
     progress: 100,
     link: "https://justinconrad.dev",
+    linkIcon: <FaGlobe size={20} />,
   },
   {
     name: "Portfolio Website",
     description: "Diese Website – als laufendes Fullstack-Projekt in React & Tailwind.",
     progress: 80,
     link: "https://github.com/jstn-crd/jstn-crd-website",
+    linkIcon: <FaGithub size={20} />,
   },
   {
     name: "Brainstorming für Projekte",
@@ -36,8 +38,9 @@ export default function CurrentProjects() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-2xl font-bold mb-6 tracking-wide flex items-center gap-2 text-blue-600 dark:text-blue-400"/>
-
+        className="text-2xl font-bold mb-6 tracking-wide flex items-center gap-2 text-blue-600 dark:text-blue-400"
+      >
+      </motion.h2>
       <div className="space-y-6">
         {currentProjects.map((project, idx) => (
           <motion.div
@@ -60,8 +63,9 @@ export default function CurrentProjects() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                aria-label={`Link zu ${project.name}`}
               >
-                <FaGithub size={20} />
+                {project.linkIcon || <FaGithub size={20} />}
               </a>
             </div>
             <div className="w-full bg-gray-300 dark:bg-gray-600 h-2 rounded-full">
