@@ -11,9 +11,16 @@ const currentProjects = [
     linkIcon: <FaGlobe size={20} />,
   },
   {
+    name: "Nuwimo Immobilienmanagement Website erstellung",
+    description: "Nuwimo Immobilienmanagement Website erstellt und veröffentlicht.",
+    progress: 100,
+    link: "https://nuwimo.de/",
+    linkIcon: <FaGlobe size={20} />,
+  },
+  {
     name: "Portfolio Website",
     description: "Diese Website – als laufendes Fullstack-Projekt in React & Tailwind.",
-    progress: 80,
+    progress: 85,
     link: "https://github.com/jstn-crd/jstn-crd-website",
     linkIcon: <FaGithub size={20} />,
   },
